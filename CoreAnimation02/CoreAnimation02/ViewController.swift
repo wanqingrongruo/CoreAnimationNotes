@@ -45,6 +45,7 @@ class ViewController: UIViewController {
 
         view.addSubview(demoView)
  */
+        bgView.layer.cornerRadius = 100
         hourView.layer.anchorPoint = CGPoint(x: 0.5, y: 0.9)
         minView.layer.anchorPoint = CGPoint(x: 0.5, y: 0.9)
         secView.layer.anchorPoint = CGPoint(x: 0.5, y: 0.9)
@@ -52,7 +53,6 @@ class ViewController: UIViewController {
         self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(tick), userInfo: nil, repeats: true)
 
         tick()
-
     }
 
     @objc func tick() {
