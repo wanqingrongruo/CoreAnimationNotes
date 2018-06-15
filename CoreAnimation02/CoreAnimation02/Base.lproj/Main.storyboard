@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreAnimation02" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zij-ka-NYD">
+                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="883-NR-ChT"/>
+                                    <constraint firstAttribute="height" constant="200" id="hMg-Ma-V3a"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UTS-44-5sd">
+                                <rect key="frame" x="185" y="308.5" width="5" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Q67-50-lK1"/>
+                                    <constraint firstAttribute="width" constant="5" id="i8Y-3R-rjA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0xE-r9-coE">
+                                <rect key="frame" x="186" y="298.5" width="3" height="70"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.90980392160000001" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="3" id="Nd1-1h-zcS"/>
+                                    <constraint firstAttribute="height" constant="70" id="qF0-su-MEE"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkr-cj-2ye">
+                                <rect key="frame" x="187" y="288.5" width="1" height="90"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="pXB-x2-Z7O"/>
+                                    <constraint firstAttribute="height" constant="90" id="yar-YK-Dph"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zij-ka-NYD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1df-Ij-Tw4"/>
+                            <constraint firstItem="UTS-44-5sd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CNx-bj-mSa"/>
+                            <constraint firstItem="0xE-r9-coE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Pg8-Mj-xvF"/>
+                            <constraint firstItem="UTS-44-5sd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TLw-ie-Db3"/>
+                            <constraint firstItem="kkr-cj-2ye" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cTT-Gr-G49"/>
+                            <constraint firstItem="kkr-cj-2ye" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="exT-dC-Ym7"/>
+                            <constraint firstItem="Zij-ka-NYD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w16-GI-kqX"/>
+                            <constraint firstItem="0xE-r9-coE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xS7-a3-t9l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bgView" destination="Zij-ka-NYD" id="mvE-JV-uP0"/>
+                        <outlet property="hourView" destination="UTS-44-5sd" id="zHQ-V1-LSq"/>
+                        <outlet property="minView" destination="0xE-r9-coE" id="NPa-gO-Epx"/>
+                        <outlet property="secView" destination="kkr-cj-2ye" id="Tla-AE-Zkl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
