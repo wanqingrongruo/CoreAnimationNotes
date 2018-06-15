@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var minView: UIView!
     @IBOutlet weak var secView: UIView!
 
-    var timer: Timer!
+    var timer: DispatchSourceTimer!
     
     lazy var demoView: UIView = {
         let view = UIView()
@@ -50,9 +50,14 @@ class ViewController: UIViewController {
         minView.layer.anchorPoint = CGPoint(x: 0.5, y: 0.9)
         secView.layer.anchorPoint = CGPoint(x: 0.5, y: 0.9)
 
-        self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(tick), userInfo: nil, repeats: true)
-
         tick()
+
+        timer = DispatchSource.makeTimerSource(queue: DispatchQueue.main)
+        timer.schedule(deadline: .now(), repeating: .seconds(1))
+        timer.setEventHandler { [weak self] in
+            self?.tick()
+        }
+        timer.resume()
     }
 
     @objc func tick() {
