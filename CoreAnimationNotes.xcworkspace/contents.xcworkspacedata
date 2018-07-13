@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:CoreAnimation04/CoreAnimation04.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:CoreAnimation03/CoreAnimation03.xcodeproj">
    </FileRef>
    <FileRef

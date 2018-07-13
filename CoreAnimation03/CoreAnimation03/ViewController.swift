@@ -70,8 +70,6 @@ class ViewController: UIViewController {
         } else {
             showTip(title: "Inside self.view layer")
         }
-
-
     }
 
     func showTip(title: String?, message: String? = nil) {
