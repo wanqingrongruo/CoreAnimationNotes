@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GLKit
 
 class FaceView: UIView {
     override init(frame: CGRect) {
@@ -41,6 +42,9 @@ class FaceView: UIView {
 }
 
 class ViewController: UIViewController {
+
+    let lightDirection = (0.0, 1.0, -0.5)
+    let ambientLight: Float = 0.5
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var leftImageView: UIImageView!
@@ -153,6 +157,49 @@ class ViewController: UIViewController {
         face.frame = CGRect(origin: .zero, size: CGSize(width: 200, height: 200))
         face.center = CGPoint(x: size.width / 2.0, y: size.height / 2)
         face.layer.transform = transform
+
+        // 
+        applyLightingToFace(face: face.layer)
+    }
+
+    // 动态计算光线效果
+    func applyLightingToFace(face: CALayer) {
+        let layer = CALayer()
+        layer.frame = face.bounds
+        face.addSublayer(layer)
+
+        let transform = face.transform
+        let matrix4 = matrix4FromCATransform3D(transform: transform)
+        let matrix3 = GLKMatrix4GetMatrix3(matrix4)
+        var normal = GLKVector3Make(0, 0, 1)
+        normal = GLKMatrix3MultiplyVector3(matrix3, normal)
+        normal = GLKVector3Normalize(normal)
+        let light = GLKVector3Normalize(GLKVector3Make(Float(lightDirection.0), Float(lightDirection.1), Float(lightDirection.2)))
+        let dotProduct = GLKVector3DotProduct(light, normal)
+        let shadow = 1 + dotProduct - ambientLight
+        let color = UIColor(white: 0, alpha: CGFloat(shadow))
+        layer.backgroundColor = color.cgColor
+    }
+
+    func matrix4FromCATransform3D(transform: CATransform3D) -> GLKMatrix4 {
+        let matrix4 = GLKMatrix4(m: (Float(transform.m11),
+                                     Float(transform.m12),
+                                     Float(transform.m13),
+                                     Float(transform.m14),
+                                     Float(transform.m21),
+                                     Float(transform.m22),
+                                     Float(transform.m23),
+                                     Float(transform.m24),
+                                     Float(transform.m31),
+                                     Float(transform.m32),
+                                     Float(transform.m33),
+                                     Float(transform.m34),
+                                     Float(transform.m41),
+                                     Float(transform.m42),
+                                     Float(transform.m43),
+                                     Float(transform.m44))
+        )
+        return matrix4
     }
 
     // 仿射变换 -- 2D  => Core Graphics
