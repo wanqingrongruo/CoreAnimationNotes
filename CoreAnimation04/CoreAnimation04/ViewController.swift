@@ -59,6 +59,11 @@ class ViewController: UIViewController {
 
         whiteView01.layer.borderWidth = 5
         whiteView02.layer.borderWidth = 5
+        
+        whiteView02.layer.isGeometryFlipped = true
+        
+       
+        redView02.layer.isGeometryFlipped = true
 
         shadowView.layer.shadowOpacity = 0.5
         shadowView.layer.shadowColor = UIColor.black.cgColor
