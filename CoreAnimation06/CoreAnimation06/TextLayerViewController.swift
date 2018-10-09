@@ -14,6 +14,30 @@ class TextLayerViewController: BaseViewController {
         super.viewDidLoad()
 
         addContainerView()
+
+        setupTextLayer()
+    }
+
+    func setupTextLayer() {
+        let textLayer = CATextLayer()
+        textLayer.frame = containerView.bounds
+
+        containerView.layer.addSublayer(textLayer)
+
+        textLayer.foregroundColor = UIColor.black.cgColor
+        textLayer.alignmentMode = .justified
+        textLayer.isWrapped = true
+
+        let font = UIFont.systemFont(ofSize: 15)
+        let fontName = font.fontName as CFString
+        let fontRef = CGFont(fontName)
+        textLayer.font = fontRef
+        textLayer.fontSize = font.pointSize
+
+        let text = "穿过幽暗的岁月 也曾感到彷徨 当你低头的瞬间 才发觉脚下的路"
+        textLayer.string = text
+
+        textLayer.contentsScale = UIScreen.main.scale
     }
 
     override func handleOrientation() {
