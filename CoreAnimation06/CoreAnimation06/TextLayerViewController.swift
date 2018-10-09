@@ -13,18 +13,12 @@ class TextLayerViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        addContainerView()
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func handleOrientation() {
+        let width = UIScreen.main.bounds.width
+        containerView.frame = CGRect(x: 0, y: 0, width: width, height: 300)
+        containerView.center = view.center
     }
-    */
-
 }

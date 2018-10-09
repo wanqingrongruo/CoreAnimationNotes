@@ -32,7 +32,7 @@ class ViewController: BaseViewController {
         title = "专用图层"
         setUI()
     }
-
+    
     override func viewWillLayoutSubviews() {
         tableView.frame = view.bounds
     }
@@ -57,6 +57,8 @@ class ViewController: BaseViewController {
 
         let option02 = Option(title: "CATextLayer", vc: "TextLayerViewController", type: .textLayer)
 
+        array.append(option02)
+
         return array
     }()
 
@@ -74,12 +76,16 @@ class ViewController: BaseViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
         return dataSource.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        let item = dataSource[indexPath.row]
+        let item = dataSource[indexPath.section]
         cell.textLabel?.text = item.title
         return cell
     }
@@ -87,7 +93,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        let item = dataSource[indexPath.row]
+        let item = dataSource[indexPath.section]
         let nameSpace = Bundle.main.infoDictionary?["CFBundleExecutable"] as? String ?? ""
         let vcString = nameSpace + "." + item.vc
 

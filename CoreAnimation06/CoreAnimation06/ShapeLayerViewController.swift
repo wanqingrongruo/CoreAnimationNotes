@@ -13,18 +13,25 @@ class ShapeLayerViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        containerView.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
-        containerView.center = view.center
-        view.addSubview(containerView)
-
+        addContainerView()
+        
         createShapeLayer()
 
         drawCorner()
     }
 
     override func handleOrientation() {
-        containerView.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
+        let width = UIScreen.main.bounds.width
+        containerView.frame = CGRect(x: 0, y: 0, width: width, height: 300)
         containerView.center = view.center
+
+        containerView.layer.sublayers?.forEach({
+            $0.removeFromSuperlayer()
+        })
+
+        createShapeLayer()
+
+        drawCorner()
     }
 
     func createShapeLayer() {
@@ -63,11 +70,5 @@ class ShapeLayerViewController: BaseViewController {
         shapeLayer.path = path.cgPath
         containerView.layer.mask = shapeLayer
     }
-
-    private lazy var containerView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .gray
-        return view
-    }()
 
 }
