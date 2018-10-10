@@ -56,8 +56,13 @@ class ViewController: BaseViewController {
         array.append(option01)
 
         let option02 = Option(title: "CATextLayer", vc: "TextLayerViewController", type: .textLayer)
-
         array.append(option02)
+
+        let option03 = Option(title: "CATransfornmLayer", vc: "TransfornmLayerViewController", type: .transformLayer)
+        array.append(option03)
+
+        let option04 = Option(title: "CAGradientLayer", vc: "GradientLayerViewController", type: .gradientLayer)
+        array.append(option04)
 
         return array
     }()
@@ -112,7 +117,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             if let clz = NSClassFromString(vcString) as? TextLayerViewController.Type {
                 generateVC(vc: clz)
             }
-
+        case .transformLayer:
+            if let clz = NSClassFromString(vcString) as? TransfornmLayerViewController.Type {
+                generateVC(vc: clz)
+            }
+        case .gradientLayer:
+            if let clz = NSClassFromString(vcString) as? GradientLayerViewController.Type {
+                generateVC(vc: clz)
+            }
         default:
             break
         }
