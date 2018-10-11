@@ -20,6 +20,7 @@ class ViewController: BaseViewController {
         case tiledLayer
         case emitterLayer
         case eagLayer
+        case avPlayerLayer
     }
     struct Option {
         var title: String
@@ -73,6 +74,15 @@ class ViewController: BaseViewController {
         let option07 = Option(title: "CATiledLayer", vc: "TiledLayerViewController", type: .tiledLayer)
         array.append(option07)
 
+        let option08 = Option(title: "CAEmitterLayer", vc: "EmitterLayerViewController", type: .emitterLayer)
+        array.append(option08)
+
+        let option09 = Option(title: "CAEAGLLayer", vc: "EAGLLayerViewController", type: .eagLayer)
+        array.append(option09)
+
+        let option10 = Option(title: "AVPlayerLayer", vc: "AVPlayerLayerViewController", type: .avPlayerLayer)
+        array.append(option10)
+
         return array
     }()
 
@@ -90,16 +100,12 @@ class ViewController: BaseViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-
-    func numberOfSections(in tableView: UITableView) -> Int {
         return dataSource.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        let item = dataSource[indexPath.section]
+        let item = dataSource[indexPath.row]
         cell.textLabel?.text = item.title
         return cell
     }
@@ -107,7 +113,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        let item = dataSource[indexPath.section]
+        let item = dataSource[indexPath.row]
         let nameSpace = Bundle.main.infoDictionary?["CFBundleExecutable"] as? String ?? ""
         let vcString = nameSpace + "." + item.vc
 
@@ -146,8 +152,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             if let clz = NSClassFromString(vcString) as? TiledLayerViewController.Type {
                 generateVC(vc: clz)
             }
-        default:
-            break
+        case .emitterLayer:
+            if let clz = NSClassFromString(vcString) as? EmitterLayerViewController.Type {
+                generateVC(vc: clz)
+            }
+        case .eagLayer:
+            if let clz = NSClassFromString(vcString) as? EAGLLayerViewController.Type {
+                generateVC(vc: clz)
+            }
+        case .avPlayerLayer:
+            if let clz = NSClassFromString(vcString) as? AVPlayerLayerViewController.Type {
+                generateVC(vc: clz)
+            }
         }
     }
 }
