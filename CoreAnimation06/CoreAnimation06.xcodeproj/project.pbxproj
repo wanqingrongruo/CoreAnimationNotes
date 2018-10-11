@@ -18,6 +18,8 @@
 		E0E27700216DF8DF00019B65 /* TransfornmLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E276FF216DF8DE00019B65 /* TransfornmLayerViewController.swift */; };
 		E0E27704216E07FC00019B65 /* GradientLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E27703216E07FC00019B65 /* GradientLayerViewController.swift */; };
 		E0E27706216E0D1400019B65 /* ReplicatorLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E27705216E0D1400019B65 /* ReplicatorLayerViewController.swift */; };
+		E0E2770C216EF9A900019B65 /* ScrollLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E2770B216EF9A900019B65 /* ScrollLayerViewController.swift */; };
+		E0E27716216F2AE900019B65 /* TiledLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E27715216F2AE800019B65 /* TiledLayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		E0E276FF216DF8DE00019B65 /* TransfornmLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfornmLayerViewController.swift; sourceTree = "<group>"; };
 		E0E27703216E07FC00019B65 /* GradientLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayerViewController.swift; sourceTree = "<group>"; };
 		E0E27705216E0D1400019B65 /* ReplicatorLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplicatorLayerViewController.swift; sourceTree = "<group>"; };
+		E0E2770B216EF9A900019B65 /* ScrollLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollLayerViewController.swift; sourceTree = "<group>"; };
+		E0E27715216F2AE800019B65 /* TiledLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiledLayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 				E0E276FF216DF8DE00019B65 /* TransfornmLayerViewController.swift */,
 				E0E27703216E07FC00019B65 /* GradientLayerViewController.swift */,
 				E0E27705216E0D1400019B65 /* ReplicatorLayerViewController.swift */,
+				E0E2770B216EF9A900019B65 /* ScrollLayerViewController.swift */,
+				E0E27715216F2AE800019B65 /* TiledLayerViewController.swift */,
 				E0E276C6216C5ACE00019B65 /* Main.storyboard */,
 				E0E276C9216C5AD000019B65 /* Assets.xcassets */,
 				E0E276CB216C5AD000019B65 /* LaunchScreen.storyboard */,
@@ -156,9 +162,11 @@
 				E0E276D7216C728100019B65 /* ShapeLayerViewController.swift in Sources */,
 				E0E276E3216CAF5700019B65 /* TextLayerViewController.swift in Sources */,
 				E0E276E1216CA45900019B65 /* BaseViewController.swift in Sources */,
+				E0E27716216F2AE900019B65 /* TiledLayerViewController.swift in Sources */,
 				E0E276C5216C5ACE00019B65 /* ViewController.swift in Sources */,
 				E0E27700216DF8DF00019B65 /* TransfornmLayerViewController.swift in Sources */,
 				E0E276C3216C5ACE00019B65 /* AppDelegate.swift in Sources */,
+				E0E2770C216EF9A900019B65 /* ScrollLayerViewController.swift in Sources */,
 				E0E27704216E07FC00019B65 /* GradientLayerViewController.swift in Sources */,
 				E0E27706216E0D1400019B65 /* ReplicatorLayerViewController.swift in Sources */,
 			);

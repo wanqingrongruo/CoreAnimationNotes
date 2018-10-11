@@ -67,6 +67,12 @@ class ViewController: BaseViewController {
         let option05 = Option(title: "CAReplicatorLayer", vc: "ReplicatorLayerViewController", type: .replicatorLayer)
         array.append(option05)
 
+        let option06 = Option(title: "CAScrollLayer", vc: "ScrollLayerViewController", type: .scrollerLayer)
+        array.append(option06)
+
+        let option07 = Option(title: "CATiledLayer", vc: "TiledLayerViewController", type: .tiledLayer)
+        array.append(option07)
+
         return array
     }()
 
@@ -130,6 +136,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             }
         case .replicatorLayer:
             if let clz = NSClassFromString(vcString) as? ReplicatorLayerViewController.Type {
+                generateVC(vc: clz)
+            }
+        case .scrollerLayer:
+            if let clz = NSClassFromString(vcString) as? ScrollLayerViewController.Type {
+                generateVC(vc: clz)
+            }
+        case .tiledLayer:
+            if let clz = NSClassFromString(vcString) as? TiledLayerViewController.Type {
                 generateVC(vc: clz)
             }
         default:

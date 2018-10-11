@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TiledLayerHelper/TiledLayerHelper.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:CoreAnimation06/CoreAnimation06.xcodeproj">
    </FileRef>
    <FileRef
