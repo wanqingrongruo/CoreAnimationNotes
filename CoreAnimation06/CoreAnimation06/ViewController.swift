@@ -64,6 +64,9 @@ class ViewController: BaseViewController {
         let option04 = Option(title: "CAGradientLayer", vc: "GradientLayerViewController", type: .gradientLayer)
         array.append(option04)
 
+        let option05 = Option(title: "CAReplicatorLayer", vc: "ReplicatorLayerViewController", type: .replicatorLayer)
+        array.append(option05)
+
         return array
     }()
 
@@ -123,6 +126,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             }
         case .gradientLayer:
             if let clz = NSClassFromString(vcString) as? GradientLayerViewController.Type {
+                generateVC(vc: clz)
+            }
+        case .replicatorLayer:
+            if let clz = NSClassFromString(vcString) as? ReplicatorLayerViewController.Type {
                 generateVC(vc: clz)
             }
         default:
