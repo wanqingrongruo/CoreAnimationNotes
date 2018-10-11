@@ -23,6 +23,7 @@
 		E0E2772B216F448400019B65 /* EmitterLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E2772A216F448400019B65 /* EmitterLayerViewController.swift */; };
 		E0E2772D216F4A9500019B65 /* EAGLLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E2772C216F4A9500019B65 /* EAGLLayerViewController.swift */; };
 		E0E2772F216F597F00019B65 /* AVPlayerLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E2772E216F597F00019B65 /* AVPlayerLayerViewController.swift */; };
+		E0E27731216F5BA300019B65 /* healthy.MOV in Resources */ = {isa = PBXBuildFile; fileRef = E0E27730216F5BA200019B65 /* healthy.MOV */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		E0E2772A216F448400019B65 /* EmitterLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterLayerViewController.swift; sourceTree = "<group>"; };
 		E0E2772C216F4A9500019B65 /* EAGLLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGLLayerViewController.swift; sourceTree = "<group>"; };
 		E0E2772E216F597F00019B65 /* AVPlayerLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerLayerViewController.swift; sourceTree = "<group>"; };
+		E0E27730216F5BA200019B65 /* healthy.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = healthy.MOV; path = ../../../../Downloads/healthy.MOV; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				E0E2772E216F597F00019B65 /* AVPlayerLayerViewController.swift */,
 				E0E276C6216C5ACE00019B65 /* Main.storyboard */,
 				E0E276C9216C5AD000019B65 /* Assets.xcassets */,
+				E0E27730216F5BA200019B65 /* healthy.MOV */,
 				E0E276CB216C5AD000019B65 /* LaunchScreen.storyboard */,
 				E0E276CE216C5AD000019B65 /* Info.plist */,
 			);
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0E276CD216C5AD000019B65 /* LaunchScreen.storyboard in Resources */,
+				E0E27731216F5BA300019B65 /* healthy.MOV in Resources */,
 				E0E276CA216C5AD000019B65 /* Assets.xcassets in Resources */,
 				E0E276C8216C5ACE00019B65 /* Main.storyboard in Resources */,
 			);

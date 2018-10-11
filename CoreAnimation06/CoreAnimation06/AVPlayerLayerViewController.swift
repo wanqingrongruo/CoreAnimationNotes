@@ -7,24 +7,35 @@
 //
 
 import UIKit
+import AVFoundation
 
 class AVPlayerLayerViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-    
+        addContainerView()
 
-    /*
-    // MARK: - Navigation
+        guard let url = Bundle.main.url(forResource: "healthy", withExtension: "MOV") else {
+            return
+        }
+        let palyer = AVPlayer(url: url)
+        let palyerLayer = AVPlayerLayer(player: palyer)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        palyerLayer.frame = containerView.bounds
+        containerView.layer.addSublayer(palyerLayer)
+
+        var transform = CATransform3DIdentity
+        transform.m34 = -1 / 500
+        transform = CATransform3DRotate(transform, CGFloat.pi / 4, 1, 1, 0)
+        palyerLayer.transform = transform
+
+        palyerLayer.masksToBounds = true
+        palyerLayer.cornerRadius = 20
+        palyerLayer.borderColor = UIColor.red.cgColor
+        palyerLayer.borderWidth = 5.0
+
+        palyer.play()
     }
-    */
 
 }
