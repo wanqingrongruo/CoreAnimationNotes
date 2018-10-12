@@ -16,7 +16,7 @@ class AVPlayerLayerViewController: BaseViewController {
 
         addContainerView()
 
-        guard let url = Bundle.main.url(forResource: "healthy", withExtension: "MOV") else {
+        guard let url = Bundle.main.url(forResource: "2", withExtension: "mp4") else {
             return
         }
         let palyer = AVPlayer(url: url)
