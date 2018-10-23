@@ -10,11 +10,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var redView: UIView!
+    var colorLayer: CALayer = CALayer()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        colorLayer.frame = CGRect(x: 0, y: 0, width: redView.bounds.width, height: redView.bounds.height)
+        colorLayer.backgroundColor = UIColor.blue.cgColor
+        redView.layer.addSublayer(colorLayer)
     }
 
-
+    @IBAction func changeColor(_ sender: UIButton) {
+        CATransaction.begin()
+        CATransaction.setAnimationDuration(2.0)
+        CATransaction.setCompletionBlock { [weak self] in
+            guard let `self` = self  else { return }
+            var transform = self.colorLayer.affineTransform()
+            transform = transform.rotated(by: CGFloat.pi / 2)
+            self.colorLayer.setAffineTransform(transform)
+        }
+        let red = CGFloat.random(in: 0 ... 1)
+        let green = CGFloat.random(in: 0 ... 1)
+        let blue = CGFloat.random(in: 0 ... 1)
+        colorLayer.backgroundColor = UIColor(displayP3Red: red, green: green, blue: blue, alpha: 1).cgColor
+        CATransaction.commit()
+    }
+    
 }
 
