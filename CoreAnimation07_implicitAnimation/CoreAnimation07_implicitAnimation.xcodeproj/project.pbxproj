@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0C40A89219AA26F0070AE13 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C40A88219AA26F0070AE13 /* DetailViewController.swift */; };
 		E0EE50632176D72500BA048E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EE50622176D72500BA048E /* AppDelegate.swift */; };
 		E0EE50652176D72500BA048E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EE50642176D72500BA048E /* ViewController.swift */; };
 		E0EE50682176D72500BA048E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0EE50662176D72500BA048E /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E0C40A88219AA26F0070AE13 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E0EE505F2176D72500BA048E /* CoreAnimation07_implicitAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreAnimation07_implicitAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EE50622176D72500BA048E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0EE50642176D72500BA048E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				E0EE50622176D72500BA048E /* AppDelegate.swift */,
 				E0EE50642176D72500BA048E /* ViewController.swift */,
+				E0C40A88219AA26F0070AE13 /* DetailViewController.swift */,
 				E0EE50662176D72500BA048E /* Main.storyboard */,
 				E0EE50692176D72800BA048E /* Assets.xcassets */,
 				E0EE506B2176D72800BA048E /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0C40A89219AA26F0070AE13 /* DetailViewController.swift in Sources */,
 				E0EE50652176D72500BA048E /* ViewController.swift in Sources */,
 				E0EE50632176D72500BA048E /* AppDelegate.swift in Sources */,
 			);
