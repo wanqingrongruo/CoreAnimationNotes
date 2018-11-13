@@ -40,6 +40,9 @@ class DetailViewController: UIViewController {
         transition.type = .push
         transition.subtype = CATransitionSubtype.fromLeft
         colorLayer.actions = ["backgroundColor": transition]
+
+        // 呈现图层:模型图层的复制, 它的属性值代表了在任何指定时刻当前外观效果
+        colorLayer.presentation()//?.model()
     }
 
     @IBAction func changeColor(_ sender: UIButton) {

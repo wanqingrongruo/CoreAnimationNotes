@@ -25,12 +25,12 @@ class ViewController: UIViewController {
     @IBAction func changeColor(_ sender: UIButton) {
         CATransaction.begin()
         CATransaction.setAnimationDuration(2.0)
-        CATransaction.setCompletionBlock { [weak self] in
+//        CATransaction.setCompletionBlock { [weak self] in
 //            guard let `self` = self  else { return }
 //            var transform = self.colorLayer.affineTransform()
 //            transform = transform.rotated(by: CGFloat.pi / 2)
 //            self.colorLayer.setAffineTransform(transform)
-        }
+//        }
         let red = CGFloat.random(in: 0 ... 1)
         let green = CGFloat.random(in: 0 ... 1)
         let blue = CGFloat.random(in: 0 ... 1)
@@ -54,6 +54,10 @@ class ViewController: UIViewController {
         if let vc = segue.source as? DetailViewController {
             vc.callback?(vc.tag)
         }
+    }
+
+    @IBAction func unwindPresentation(segue: UIStoryboardSegue) {
+        
     }
 }
 
