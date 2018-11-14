@@ -55,9 +55,8 @@
                                     <action selector="skipToNextPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7bX-eq-qSY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXW-30-wfP">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXW-30-wfP">
                                 <rect key="frame" x="105" y="563" width="119" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="PresentaionLayer"/>
                                 <connections>
                                     <segue destination="JVp-8k-C7a" kind="showDetail" id="ugQ-P8-Izu"/>
@@ -69,6 +68,9 @@
                             <constraint firstItem="nDf-tE-xHW" firstAttribute="centerX" secondItem="Z4Q-Yc-lph" secondAttribute="centerX" id="6ga-f9-1t4"/>
                             <constraint firstItem="Z4Q-Yc-lph" firstAttribute="top" secondItem="nDf-tE-xHW" secondAttribute="bottom" constant="62" id="Ngf-u9-jrp"/>
                             <constraint firstItem="nDf-tE-xHW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="SOT-bF-iUV"/>
+                            <constraint firstItem="pXW-30-wfP" firstAttribute="top" secondItem="Z4Q-Yc-lph" secondAttribute="bottom" constant="21" id="U6x-6U-jwO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pXW-30-wfP" secondAttribute="trailing" symbolic="YES" id="Ylp-ha-YTj"/>
+                            <constraint firstItem="pXW-30-wfP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105" id="Z78-XA-I8z"/>
                             <constraint firstItem="nDf-tE-xHW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="141" id="x8t-DI-d3L"/>
                             <constraint firstAttribute="bottom" secondItem="nDf-tE-xHW" secondAttribute="bottom" constant="217" id="xY4-tW-Juw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nDf-tE-xHW" secondAttribute="trailing" constant="82" id="xvw-Ei-QHk"/>
@@ -163,9 +165,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfh-dY-NIP">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfh-dY-NIP">
                                 <rect key="frame" x="25" y="54" width="45" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="cancel"/>
                                 <connections>
                                     <segue destination="6wB-21-cVZ" kind="unwind" unwindAction="unwindPresentationWithSegue:" id="4wU-zZ-rbO"/>
@@ -173,6 +174,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hfh-dY-NIP" firstAttribute="leading" secondItem="UhX-CF-p7f" secondAttribute="leading" constant="25" id="4q1-6K-Jgd"/>
+                            <constraint firstItem="UhX-CF-p7f" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hfh-dY-NIP" secondAttribute="trailing" symbolic="YES" id="ocb-s8-o8h"/>
+                            <constraint firstItem="hfh-dY-NIP" firstAttribute="top" secondItem="UhX-CF-p7f" secondAttribute="top" constant="34" id="tSr-FS-6Ed"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UhX-CF-p7f"/>
                     </view>
                 </viewController>

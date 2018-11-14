@@ -15,7 +15,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var redView: UIView!
 
-    var colorLayer: CALayer = CALayer()
+    let colorLayer: CALayer = CALayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()

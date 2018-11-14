@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var redView: UIView!
-    var colorLayer: CALayer = CALayer()
+    let colorLayer: CALayer = CALayer()
     override func viewDidLoad() {
         super.viewDidLoad()
 //        colorLayer.frame = CGRect(x: 0, y: 0, width: redView.bounds.width, height: redView.bounds.height)

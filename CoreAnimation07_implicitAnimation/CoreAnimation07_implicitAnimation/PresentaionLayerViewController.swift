@@ -10,7 +10,7 @@ import UIKit
 
 class PresentaionLayerViewController: UIViewController {
 
-    var colorLayer: CALayer = CALayer()
+    let colorLayer: CALayer = CALayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
