@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E092DD89219BF6D500AEED38 /* KeyFrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E092DD88219BF6D500AEED38 /* KeyFrameViewController.swift */; };
 		E092DD8B219BF98D00AEED38 /* feiji.png in Resources */ = {isa = PBXBuildFile; fileRef = E092DD8A219BF98D00AEED38 /* feiji.png */; };
+		E092DD8D219BFF3D00AEED38 /* RotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E092DD8C219BFF3D00AEED38 /* RotationViewController.swift */; };
 		E0C40A99219BBAB30070AE13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C40A98219BBAB30070AE13 /* AppDelegate.swift */; };
 		E0C40A9B219BBAB30070AE13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C40A9A219BBAB30070AE13 /* ViewController.swift */; };
 		E0C40A9E219BBAB30070AE13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C40A9C219BBAB30070AE13 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		E092DD88219BF6D500AEED38 /* KeyFrameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyFrameViewController.swift; sourceTree = "<group>"; };
 		E092DD8A219BF98D00AEED38 /* feiji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = feiji.png; path = ../../../../Downloads/files/feiji.png; sourceTree = "<group>"; };
+		E092DD8C219BFF3D00AEED38 /* RotationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationViewController.swift; sourceTree = "<group>"; };
 		E0C40A95219BBAB30070AE13 /* CoreAnimation08_explicitAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreAnimation08_explicitAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0C40A98219BBAB30070AE13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0C40A9A219BBAB30070AE13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				E0C40A98219BBAB30070AE13 /* AppDelegate.swift */,
 				E0C40A9A219BBAB30070AE13 /* ViewController.swift */,
 				E092DD88219BF6D500AEED38 /* KeyFrameViewController.swift */,
+				E092DD8C219BFF3D00AEED38 /* RotationViewController.swift */,
 				E092DD8A219BF98D00AEED38 /* feiji.png */,
 				E0C40A9C219BBAB30070AE13 /* Main.storyboard */,
 				E0C40A9F219BBAB60070AE13 /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 			files = (
 				E0C40A9B219BBAB30070AE13 /* ViewController.swift in Sources */,
 				E092DD89219BF6D500AEED38 /* KeyFrameViewController.swift in Sources */,
+				E092DD8D219BFF3D00AEED38 /* RotationViewController.swift in Sources */,
 				E0C40A99219BBAB30070AE13 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

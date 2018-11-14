@@ -51,6 +51,9 @@ class ViewController: UIViewController {
     @IBAction func unwindPresentation(segue: UIStoryboardSegue) {
 
     }
+    @IBAction func unwindRotation(segue: UIStoryboardSegue) {
+
+    }
 }
 
 extension ViewController: CAAnimationDelegate {
